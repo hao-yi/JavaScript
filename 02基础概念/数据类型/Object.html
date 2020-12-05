@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Object: 对象类型 : {
+        属性;
+        方法;
+      }
+      var o = new Object() // 实例创建一个对象
+      var o = new Object // 构造函数在不传递参数的时候可以省略小括号
+      每一个对象都有一下属性和方法
+      constructor: 保存着用于创建当前对象的函数，对于 var o = new Object() 而言构造函数constructor就是Object
+      hasOwnProperty(propertyName): 用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在
+                                    参数propertyName必须已字符串形式指定
+                                    例如： o.hasOwnProperty('name')
+      isPrototypeOf(object): 用于检测传入的对象是否是当前对象的原型;
+      propertyIsEnumerable(propertyName): 用于检测给定的属性是否能够使用for-in
+                                          参数propertyName必须已字符串形式指定
+      toLocaleString(): 返回对象的字符表示，该字符串与执行环境的地区对应
+      toString(): 返回对象的字符串表示
+      valueOf(): 返回对象的字符串、数值或布尔值表示，通常与toString()方法的返回值相同 
+    */
+  </script>
+  <script>
+    var o = new Object();
+    console.log(o);
+    o.name = '呵呵';
+    o.link = function () {
+      console.log('嘻嘻');
+    };
+    console.log(o.hasOwnProperty('name')); //true 是实例对象的属性
+    console.log(o.isPrototypeOf(o)); // false 不是当前对象的原型
+    console.log(o.propertyIsEnumerable('name')); //true 这个属性可以使用for-in
+    console.log(o.toLocaleString()); // [object Object]  字符串表示
+    console.log(o.toString()); // [object Object] 字符串表示
+    console.log(o.valueOf); // valueOf() { [native code] }
+  </script>
+</body>
+</html>

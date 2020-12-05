@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js" async></script>
+  <script src="./mian.js" async></script>
+</head>
+<body>
+  <script>
+    /*
+      async: 相同：与defer一样用于改变脚本文件处理的行为，同样只适用于外部脚本，告诉浏览器立即下载
+                （当页面继续进行解析时，脚本将被执行）
+            不同：但不同的是async属性，并不能保证，外部脚本，按照顺序执行，不能确定脚本的加载时间
+            目的： 是不让页面等待脚本的下载和执行,
+            建议： 不要在async异步的时候去修改DOM
+    */
+   console.log(1);
+   console.log(2);
+   function fn() {
+     console.log(3);
+   }
+   setTimeout(() => {
+    toFn()
+   }, 5000);
+  </script>
+  <script>
+    console.log(4);
+  </script>
+</body>
+</html>

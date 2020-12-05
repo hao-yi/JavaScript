@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      js变量是动态的，变量的数据类型可以随时改变
+    */
+   var message; // 未定义的数据类型 undefined
+   var num = 1; // 初始化变量
+   var a = 1,
+       b = 'xx',
+       c = 1;  // 一次定义多个变量
+
+    function fn () {
+      var d = 1  //函数内部的局部变量，函数外部访问不到
+      console.log(1);
+    }
+    fn()
+
+    function Fn () {
+      f = 1 // 为使用 var 声明的变量为全局变量， 函数外部可以访问
+      console.log(f);
+    }
+    Fn()
+    console.log(f);
+  </script>
+
+  <script>
+    'use strict'
+    e = 1;
+    console.log(e); // 在 'use strict'严格模式下 使用未用关键字声明的变量会报错
+  </script>
+</body>
+</html>

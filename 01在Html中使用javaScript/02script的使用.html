@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <script src="./index.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var num = function() {
+      console.log('num');
+    }
+    var obj = {
+      name: function () {
+
+      }
+    }
+    toFn()
+    console.log(this.num);
+  </script>
+  <script>
+    /*
+      script 有俩种使用方式
+       1、页面嵌入script
+       2、外部引用
+      多个script模块中的js代码按照由上到下的执行顺序，可以调用上边script模块中的函数方法,及变量
+   */
+ 
+    /*
+       在使用外部script的时候，我们加入了defer属性 浏览器优先加载了html中的代码，最后加载了自己
+        当去掉defer属性的时候，浏览器会由上到下的去执行代码，外部的js代码会被第一执行，而内嵌script会最后执行
+    */
+    function Fn() {
+      console.log('你好');
+    }
+    num()
+    console.log(this.num);
+  </script>
+  <script>
+    Fn() // 你好
+    console.log(obj);
+  </script>
+</body>
+
+</html>

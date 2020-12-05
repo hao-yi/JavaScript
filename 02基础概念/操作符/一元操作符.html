@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      操作符适用，string、number、boolean、object
+        但是在应用与对象时，都会调取对象的valueOf()或toStrig()方法
+
+      一元操作运算符： {
+        前置递增（减）： {
+          变量的值都是语句在求值以前改变的，先执行操作符再求值
+        },
+        后置递增（减）： {
+          变量的值都是语句在求值以后改变的，先求值再执行操作符
+        },
+      },
+      规则： {
+        应用与一个有效的数字字符串时，会自动将其转化为数字类型，再求值;
+        应用与一个不包含有效数字的字符串时，变为NaN
+        应用与boolean时，true为1，false为0
+        应用与浮点类型，直接计算
+        应用与对象时，先调用valueOf(),如果值为NaN时，再调用toString()
+      }
+    */
+  </script>
+
+  <script>
+    var num = 10;
+    var num1 = ++num + num;
+    console.log(num1); //22
+    console.log(num-- + num); // 21
+    console.log(num++ - 1); // 9
+    console.log(num); // 11
+    var str = '10'
+    console.log(str++); // 10
+    console.log(--str); // 10
+    var flag = true;
+    var flags = false;
+    console.log(flag++ + 1); // 2
+    console.log(--flags); // -1
+    var o = {
+      valueOf: function() {
+        return '1'
+      }
+    }
+    console.log(++o); // 2
+  </script>
+</body>
+
+</html>

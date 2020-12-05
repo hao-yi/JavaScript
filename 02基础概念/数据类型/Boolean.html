@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Boolean: 布尔值， 有俩个值 true false
+                可以使用Boolean() 这个方法对js所有的其它数据类型进行转化成Boolean
+    */
+
+    /*
+      false：空字符，（空对象，null）， undefined， 0， NaN
+      true： 非空字符， 非空对象， 不等于0
+    */
+
+    /*
+      在if流程语句中 数据类型会自动转化为Boolean
+    */
+    var obj = {
+      name: '嘻嘻'
+    }
+    console.log(Boolean(null));
+    console.log(Boolean(undefined));
+    console.log(Boolean(''));
+    console.log(Boolean(0));
+    console.log(Boolean(NaN));
+    console.log(Boolean('呵呵'));
+    console.log(Boolean(obj));
+    console.log(Boolean(-1));
+    if (obj) {
+      console.log('嘿嘿');
+    }
+  </script>
+</body>
+</html>

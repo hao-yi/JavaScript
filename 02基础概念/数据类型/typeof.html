@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      typeof 用于检测数据类型
+      null数据类型 使用typeof 返回的是一个对象
+      typeof并不是一个函数 如第二个打印的小括号可以去掉
+    */
+   var message = 1;
+   var num = '1';
+   var Fn = function () {};
+   console.log(typeof message); // Number
+   console.log(typeof (num)); // String
+   console.log(typeof null); // Object
+   console.log(typeof Fn);  // function
+   console.log(typeof undefined);
+  </script>
+</body>
+</html>

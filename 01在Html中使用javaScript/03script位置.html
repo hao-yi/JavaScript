@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      第一种格式：
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <script src="./index.js"><\/script>
+        </head>
+        <body></body>
+        等到js代码全部加载解析完毕后，才去执行body里面的dom标签，
+        缺点：当一个页面有很多js外部文件或js代码的时候，会导致浏览器在呈现页面时有短暂的窗口空白期
+
+
+      第一种格式：
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+        </head>
+        <body>
+
+          这里是dom
+
+          <script src="./index.js"><\/script>
+        </body>
+        浏览器会先执行解析body里面的dom标签，再去解析js代码
+        优点：解决了第一种方式所出现的短暂窗口空白期 
+    */
+  </script>
+</body>
+</html>

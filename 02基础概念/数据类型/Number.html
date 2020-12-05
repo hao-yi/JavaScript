@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Number: 数字类型， 整数、小数
+        js最大值：Number.MAX_VALUE  最小值：Number.MIN_VALUE
+        超出最大和最小值的为 Infinity  -Infinity
+        isFinite()函数可以检测某个数字是否在最大最小值之间  返回 true false
+
+        NaN非数字类型
+          NaN与NaN也不相等   NaN == NaN // false
+          isNaN() 判断一个值是否为非数字类型  返回 true false
+          在使用isNaN进行判断时，函数内部会对值进行一个数字的转化
+
+        数值转化
+          Number() 这个函数可以用于任何数据类型
+            true 1 false 0 undefined NaN null 0
+            如果字符串全是数字类型，直接返回数字类型
+            如果字符串包含非数字则返回NaN
+
+          parseInt() 这个函数只是用与字符串  其它类型返回NaN
+            如果字符串开头为数字，则返回数字
+            如果字符串开头为其它字符，则返回NaN
+            如果为小数，则舍弃小数返回整数
+
+          parseFloat() 这个函数只是用与字符串  其它类型返回NaN
+            如果字符串开头为数字，则返回数字
+            如果字符串开头为其它字符，则返回NaN
+            如果为小数，则舍弃小数返回小数
+            如果有多个小数点，则已第一个为准，其他的小数点及后边字符被舍弃，再返回
+
+    */
+  </script>
+
+  <script>
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+    console.log(Number.MAX_VALUE + Number.MAX_VALUE);
+    console.log(-(Number.MAX_VALUE + Number.MAX_VALUE));
+    console.log(isFinite(Number.MAX_VALUE + Number.MAX_VALUE)) // false
+    console.log(isNaN(true)); // false
+    console.log(isNaN(false)); // false
+    console.log(isNaN('xx')); //true
+    console.log(isNaN(undefined)); //true
+    console.log(isNaN(null)); // false
+    console.log(isNaN(1)); // false
+    console.log(Number(true)); // 1
+    console.log(Number(false)); //0
+    console.log(Number(undefined)); // NaN
+    console.log(Number(null)); // 0
+    console.log(Number('111')); // 111
+    console.log(Number('1.1')); // 1
+    console.log(Number('x1')); // NaN
+    console.log(Number('1a1x')); // NaN
+    console.log(parseInt(true)); //NaN
+    console.log(parseInt('11.1')); // 11
+    console.log(parseInt('1x')); // 1
+    console.log(parseInt('x1')); // NaN
+    console.log(parseFloat('1.1.1')); // 1.1
+    console.log(parseFloat('1.268')); //1.268
+    console.log(parseFloat('F1.25')); //NaN
+    console.log(parseFloat('1.25bule')); //1.25
+  </script>
+</body>
+</html>
